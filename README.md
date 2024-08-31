@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project is a Spring Boot application that ingests weather data from the Weatherstack API, processes and stores it in a database, and provides an authenticated REST API for accessing the data. The system can enrich the dataset using AI models to predict future weather conditions or analyze patterns related to climate change.
+This project is a Spring Boot application that ingests weather data from the Weatherstack API, processes and stores it
+in a database, and provides an authenticated REST API for accessing the data. The system can enrich the dataset using AI
+models to predict future weather conditions or analyze patterns related to climate change.
 
 ## Features
 
@@ -12,7 +14,8 @@ This project is a Spring Boot application that ingests weather data from the Wea
 - **REST API**: Provides authenticated access to the stored weather data.
 - **Data Delivery**: Sends processed data increments to a remote location.
 - **Error Handling & Backfill**: Manages data corruption and automatically fills any gaps in the data.
-- **AI Enrichment** (Optional): Enhances the dataset with machine learning models to predict future weather conditions or analyze patterns.
+- **AI Enrichment** (Optional): Enhances the dataset with machine learning models to predict future weather conditions
+  or analyze patterns.
 
 ## Project Structure
 
@@ -55,12 +58,10 @@ Update the `application.properties` file with your specific configuration:
 # Weatherstack API configuration
 weatherstack.api.key=YOUR_API_KEY
 weatherstack.api.url=http://api.weatherstack.com/current
-
 # Database configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/weatherdata
 spring.datasource.username=root
 spring.datasource.password=yourpassword
-
 # Other configurations
 spring.jpa.hibernate.ddl-auto=update
 spring.security.user.name=admin
@@ -92,11 +93,13 @@ Authentication is required for all endpoints. The default username and password 
 
 ### 5. AI Enrichment (Optional)
 
-To enable AI enrichment, integrate a machine learning model of your choice. This can be done by adding a service that processes the weather data and enhances it with predictions or pattern analysis.
+To enable AI enrichment, integrate a machine learning model of your choice. This can be done by adding a service that
+processes the weather data and enhances it with predictions or pattern analysis.
 
 ### 6. Error Handling & Backfill
 
-The application includes built-in error handling and will attempt to backfill any missing data in case of an ingestion failure.
+The application includes built-in error handling and will attempt to backfill any missing data in case of an ingestion
+failure.
 
 ## Development Process
 
